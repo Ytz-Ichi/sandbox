@@ -1,4 +1,8 @@
 from functools import lru_cache
+import sys
+
+# Exceeds the limit対策
+sys.set_int_max_str_digits(0)
 
 # Decorator for reuse of previous results
 @lru_cache(maxsize=10000000)
