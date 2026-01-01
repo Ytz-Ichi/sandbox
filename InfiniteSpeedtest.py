@@ -48,7 +48,7 @@ def run_speedtests() -> None:
         while args.count is None or run_number < args.count:
             run_number += 1
             try:
-                subprocess.check_call(["speedtest", "--download"])
+                subprocess.check_call(["speedtest", "--no-upload"])
             except subprocess.CalledProcessError as exc:
                 failures += 1
                 log_result(
